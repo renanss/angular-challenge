@@ -1,0 +1,6 @@
+<div class="container-add-product">
+	<app-add-product (addedProduct)="addProduct($any($event))"></app-add-product>
+</div>
+
+<app-product-list [products]="products" (deletedProduct)="deleteProduct($event)"></app-product-list>
+<app-product-grid [products]="products"></app-product-grid>

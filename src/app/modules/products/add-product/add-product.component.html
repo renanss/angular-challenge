@@ -1,0 +1,32 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProductModal" (click)="openModal()">
+  Add
+</button>
+
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModal" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content" *ngIf="modal">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="addProductModal">Add Product</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+					<div class="mb-3">
+						<label for="name" class="form-label">Name</label>
+						<input type="text" class="form-control" id="name" name="productName" [(ngModel)]="product.name">
+					</div>
+					<div class="mb-3">
+						<label for="description" class="form-label">Description</label>
+						<input type="text" class="form-control" id="description"  name="productDesc" [(ngModel)]="product.description">
+					</div>
+					<div class="mb-3">
+						<label for="price" class="form-label">Price</label>
+						<input type="number" class="form-control" id="price"  name="productPrice" [(ngModel)]="product.price">
+					</div>
+				</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addProduct()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

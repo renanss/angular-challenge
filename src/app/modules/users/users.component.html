@@ -1,0 +1,14 @@
+<div class="user-list">
+	<h3>User List</h3>
+	<div *ngFor="let user of users" class="row p-2">
+		<div class="card" (click)="userDetails(user)">
+			<div class="card-body row">
+				<div class="col">
+					<h6 class="card-title">{{ user.name }}</h6>
+					<small class="card-text">{{ user.email }}</small>
+					<p class="fw-bold">{{ user.phone }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
