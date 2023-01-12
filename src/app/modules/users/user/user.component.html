@@ -12,3 +12,21 @@
 		</div>
 	</div>
 </div>
+
+<div class="purchased-products">
+	<h3>Purchased Products</h3>
+	<div *ngFor="let product of user.purchased_products" class="row p-2">
+		<div class="card">
+			<div class="card-body row">
+				<div class="col-2 p-0">
+					<img [src]="product.image" class="rounded w-100" alt="Product Image">
+				</div>
+				<div class="col-7">
+					<h6 class="card-title">{{ product.name }}</h6>
+					<small class="card-text">{{ product.description }}</small>
+					<p class="fw-bold">${{ product.price }}</p>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
