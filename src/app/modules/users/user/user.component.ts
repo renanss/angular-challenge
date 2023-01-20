@@ -14,6 +14,7 @@ export class UserComponent {
 	state: any;
 
 	ngOnInit() {
+		//This was intentionally made due to the requirements of the challenge. Should be avoided in production.
 		const _user = history.state
 		this.user = _user
 	}
